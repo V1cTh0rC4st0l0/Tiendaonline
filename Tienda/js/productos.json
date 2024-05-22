@@ -1,0 +1,252 @@
+[
+    {
+        "id": "Electronica-01",
+        "titulo": "Bateria",
+        "imagen": "./img/Electronica/Bateria.jpg",
+        "categoria": {
+            "nombre": "Electronica",
+            "id": "electronica"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Electronica-02",
+        "titulo": "Alternador",
+        "imagen": "./img/Electronica/Alternador.jpg",
+        "categoria": {
+            "nombre": "Electronica",
+            "id": "electronica"
+        },
+        "precio": 1500
+    },
+    {
+        "id": "Electronica-03",
+        "titulo": "Motor de arranque",
+        "imagen": "./img/Electronica/Motor de arranque.jpg",
+        "categoria": {
+            "nombre": "Electronica",
+            "id": "electronica"
+        },
+        "precio": 850
+    },
+    {
+        "id": "Electronica-04",
+        "titulo": "Sensor de oxígeno",
+        "imagen": "./img/Electronica/Sensor de oxígeno.jpg",
+        "categoria": {
+            "nombre": "Electronica",
+            "id": "electronica"
+        },
+        "precio": 500
+    },
+    {
+        "id": "Electronica-05",
+        "titulo": "Sensor de temperatura del refrigerante",
+        "imagen": "./img/Electronica/Sensor de temperatura del refrigerante.jpg",
+        "categoria": {
+            "nombre": "Electronica",
+            "id": "electronica"
+        },
+        "precio": 294
+    },
+    {
+        "id": "Frenos-01",
+        "titulo": "Pastillas de freno",
+        "imagen": "./img/Frenos/Pastillas de freno.jpg",
+        "categoria": {
+            "nombre": "Frenos",
+            "id": "frenos"
+        },
+        "precio": 500
+    },
+    {
+        "id": "Frenos-02",
+        "titulo": "Rotores de freno",
+        "imagen": "./img/Frenos/Rotores de freno.jpg",
+        "categoria": {
+            "nombre": "Frenos",
+            "id": "frenos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Frenos-03",
+        "titulo": "Calibradores de freno",
+        "imagen": "./img/Frenos/Calibradores de freno.jpg",
+        "categoria": {
+            "nombre": "Frenos",
+            "id": "frenos"
+        },
+        "precio": 2000
+    },
+    {
+        "id": "Frenos-04",
+        "titulo": "Líquido de frenos",
+        "imagen": "./img/Frenos/Líquido de frenos.jpg",
+        "categoria": {
+            "nombre": "Frenos",
+            "id": "frenos"
+        },
+        "precio": 100
+    },
+    {
+        "id": "Frenos-05",
+        "titulo": "Sensores de freno",
+        "imagen": "./img/Frenos/Sensores de freno.jpg",
+        "categoria": {
+            "nombre": "Frenos",
+            "id": "frenos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Motor-01",
+        "titulo": "Motor Honda VTEC 2.0L",
+        "imagen": "./img/Motores/Motor Honda VTEC 2.0L.jpg",
+        "categoria": {
+            "nombre": "Motores",
+            "id": "motores"
+        },
+        "precio": 20000
+    },
+    {
+        "id": "Motor-02",
+        "titulo": "Motor Toyota 2JZ-GTE",
+        "imagen": "./img/Motores/Motor Toyota 2JZ-GTE.jpg",
+        "categoria": {
+            "nombre": "Motores",
+            "id": "motores"
+        },
+        "precio": 40000
+    },
+    {
+        "id": "Motor-03",
+        "titulo": "Motor BMW M54B30",
+        "imagen": "./img/Motores/Motor BMW M54B30.jpg",
+        "categoria": {
+            "nombre": "Motores",
+            "id": "motores"
+        },
+        "precio": 25000
+    },
+    {
+        "id": "Motor-04",
+        "titulo": "Motor Volkswagen TDI 2.0L",
+        "imagen": "./img/Motores/Motor Volkswagen TDI 2.0L.jpg",
+        "categoria": {
+            "nombre": "Motores",
+            "id": "motores"
+        },
+        "precio": 22000
+    },
+    {
+        "id": "Motor-05",
+        "titulo": "Motor Ford EcoBoost 2.0L",
+        "imagen": "./img/Motores/Motor Ford EcoBoost 2.0L.jpg",
+        "categoria": {
+            "nombre": "Motores",
+            "id": "motores"
+        },
+        "precio": 25500
+    },
+    {
+        "id": "Suspension-01",
+        "titulo": "Amortiguadores",
+        "imagen": "./img/Suspension/Amortiguadores.jpg",
+        "categoria": {
+            "nombre": "Suspension",
+            "id": "suspension"
+        },
+        "precio": 950
+    },
+    {
+        "id": "Suspension-02",
+        "titulo": "resortes helicoidales",
+        "imagen": "./img/Suspension/resortes helicoidales.jpg",
+        "categoria": {
+            "nombre": "Suspension",
+            "id": "suspension"
+        },
+        "precio": 500
+    },
+    {
+        "id": "Suspension-03",
+        "titulo": "Rotulas",
+        "imagen": "./img/Suspension/Rotulas.jpg",
+        "categoria": {
+            "nombre": "Suspension",
+            "id": "suspension"
+        },
+        "precio": 400
+    },
+    {
+        "id": "Suspension-04",
+        "titulo": "Terminales de dirección",
+        "imagen": "./img/Suspension/Terminales de dirección.jpg",
+        "categoria": {
+            "nombre": "Suspension",
+            "id": "suspension"
+        },
+        "precio": 350
+    },
+    {
+        "id": "Suspension-05",
+        "titulo": "Base de amortiguador",
+        "imagen": "./img/Suspension/Base de amortiguador.jpg",
+        "categoria": {
+            "nombre": "Suspension",
+            "id": "suspension"
+        },
+        "precio": 250
+    },
+    {
+        "id": "Transmision-01",
+        "titulo": "Caja de cambios manual",
+        "imagen": "./img/Transmiciones/Caja de cambios manual.jpg",
+        "categoria": {
+            "nombre": "Transmiciones",
+            "id": "transmiciones"
+        },
+        "precio": 8950
+    },
+    {
+        "id": "Transmision-02",
+        "titulo": "Diferencial",
+        "imagen": "./img/Transmiciones/Diferencial.jpg",
+        "categoria": {
+            "nombre": "Transmiciones",
+            "id": "transmiciones"
+        },
+        "precio": 5500
+    },
+    {
+        "id": "Transmision-03",
+        "titulo": "Convertidor de par",
+        "imagen": "./img/Transmiciones/Convertidor de par.jpg",
+        "categoria": {
+            "nombre": "Transmiciones",
+            "id": "transmiciones"
+        },
+        "precio": 6400
+    },
+    {
+        "id": "Transmision-04",
+        "titulo": "Cuerpo de válvulas",
+        "imagen": "./img/Transmiciones/Cuerpo de válvulas.jpg",
+        "categoria": {
+            "nombre": "Transmiciones",
+            "id": "transmiciones"
+        },
+        "precio": 4350
+    },
+    {
+        "id": "Transmision-05",
+        "titulo": "Transmisión automática",
+        "imagen": "./img/Transmiciones/Transmisión automática.jpg",
+        "categoria": {
+            "nombre": "Transmiciones",
+            "id": "transmiciones"
+        },
+        "precio": 5250
+    }
+]

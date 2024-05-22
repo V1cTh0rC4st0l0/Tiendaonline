@@ -1,0 +1,244 @@
+/* Colores principales */
+body {
+  background-color: #b5b4b4; /* Gris claro */
+  color: #333; /* Gris oscuro */
+  font-family: sans-serif;/*Letras*/
+}
+
+
+h2, h3, h4, h5, h6 {
+  color: #0073b7; /* Azul */
+}
+
+a {
+  color: #13364a; /* Azul */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fff;
+  background-color: rgb(16, 41, 73);
+}
+/* Encabezado */
+header {
+  background-color: #333;
+  color: #fff; /* Blanco */
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+  
+img {
+    width: 20rem;
+    float: center;
+  }
+  
+main {
+    padding: 20px;
+  }
+  
+/* Separación de secciones */
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  border-radius: 5;
+}
+
+section:first-of-type {
+  border-top: none;
+}
+  
+  .bienvenidos p {
+    text-align: justify;
+  }
+  
+  .contacto ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contacto ul li {
+    margin-bottom: 10px;
+    
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  .navegacion_principal{
+    background-color:darkgrey;
+    color: aliceblue;
+    padding: 1 rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    .formulario{
+      background-color:rgb(129, 127, 127);
+      width: min(60rem,100%);
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 1rem;
+  }
+  .formulario fieldset{
+      border:none;
+  }
+  .formulario legend{
+      text-align: center;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color:darkblue;
+  }
+  @media(min-width:768px){
+      .contenedor-campos{
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: auto auto 20rem;
+          column-gap: 10rem;
+      }
+  }
+  .campo{
+    margin-top: 1rem;
+}
+.campo label{
+    color: white;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea{
+    height: 20rem;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+/* Lista de servicios */
+.lista-servicios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-servicios li {
+  align-items: center;
+  justify-content:space-around;
+  padding: 20px;
+  border-radius: 5%;
+  border-bottom: 3px solid #ddd;
+  display:flex;
+  flex-direction: row;
+}
+.lista-servicios div:hover {
+  background-color: #afafb0;
+}
+
+.lista-servicios li:hover {
+  background-color: #565656; /* Gris oscuro */
+}
+/*
+.lista-servicios .icono {
+  margin-right: 5px;
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 2rem;
+}*/
+
+.lista-servicios /*.icono*/ img {
+  width: 25rem;
+  height: 15rem;
+  background-size: cover;
+  /*height: 200px;*/
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+.lista-servicios h3 {
+  margin: 0;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista-servicios p {
+  margin: 0;
+  font-size: 14px;
+}
+/* Hero */
+.hero {
+  background-image: url(../imagenes/Mecanic.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.contenido-hero {
+  background-color: rgba(59, 59, 59, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+
+}
+.contenido-hero h1{
+  color: turquoise;
+  shape-margin: 30%;
+  scrollbar-shadow-color: aliceblue;
+}
+.contenido-hero h2, 
+.contenido-hero p {
+  color: whitesmoke;
+}
+.contenido-hero .ubicacion {
+  display: flex;
+  align-items: flex-start;
+}
+/*Pagina de redes sociales*/
+.redes-sociales {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.redes-sociales li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+}
+
+.redes-sociales li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.redes-sociales li a img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+.redes-sociales li a span {
+  font-size: 16px;
+}
