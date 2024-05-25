@@ -447,17 +447,17 @@ main {
   
   /* Botón de envío */
   button[type="button"] {
-    background-color: #4CAF50; /* Color de fondo verde */
+    background-color: #4ca5af; /* Color de fondo verde */
     color: white; /* Color de texto blanco */
     padding: 10px 20px; /* Espacio interno alrededor del texto */
     border: none; /* Eliminar el borde */
     border-radius: 4px; /* Bordes redondeados */
     cursor: pointer; /* Cambiar el cursor a mano al pasar el mouse sobre el botón */
-    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse sobre el botón */
+    transition: background-color 0.3s ease; /* Efecto de transición al passar el mouse sobre el botón */
   }
   
   /* Efecto de hover para el botón de envío */
   button[type="button"]:hover {
-    background-color: #45a049; /* Color de fondo verde más oscuro al pasar el mouse */
+    background-color: #4568a0; /* Color de fondo verde más oscuro al pasar el mouse */
   }
   
