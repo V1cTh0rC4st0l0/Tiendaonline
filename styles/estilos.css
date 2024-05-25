@@ -81,7 +81,7 @@ section:first-of-type {
     flex-direction: row;
     justify-content: space-between;
     }
-    .formulario{
+.formulario{
       background-color:rgb(129, 127, 127);
       width: min(60rem,100%);
       margin: 0 auto;
