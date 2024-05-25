@@ -131,7 +131,7 @@ function actualizarTotal() {
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
     // Enviar los datos del carrito al servidor
-    fetch('guardar_carrito.php', {
+    fetch('./js/guardar_carrito.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
