@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <style>
-        #formulario-registro {
-            display: none; /* Ocultar el formulario inicialmente */
+        #formulario-registro, #boton-enviar-datos {
+            display: none; /* Ocultar el formulario y el botón inicialmente */
         }
     </style>
 </head>
@@ -107,8 +107,10 @@
                     Acepto que mi información será cuidada.
                 </label>
 
-                <button type="submit" id="boton-enviar">Enviar</button>
+                <button type="button" id="boton-enviar">Enviar</button>
             </div>
+
+            <button id="boton-enviar-datos">Enviar Datos</button>
 
         </main>
     </div>

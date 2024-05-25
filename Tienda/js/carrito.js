@@ -130,6 +130,7 @@ function actualizarTotal() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const formularioRegistro = document.getElementById('formulario-registro');
+    const botonEnviarDatos = document.getElementById('boton-enviar-datos');
     const horaCompraInput = document.getElementById('hora-compra');
     const diaCompraInput = document.getElementById('dia-compra');
     const botonComprar = document.getElementById('carrito-acciones-comprar');
@@ -144,11 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     botonComprar.addEventListener('click', () => {
         formularioRegistro.style.display = 'block'; // Mostrar el formulario
+        botonEnviarDatos.style.display = 'none'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
     });
 
-    formularioRegistro.addEventListener('submit', (e) => {
-        e.preventDefault();
+    document.getElementById('boton-enviar').addEventListener('click', () => {
+        formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviarlo
+        botonEnviarDatos.style.display = 'block'; // Mostrar el botón para enviar los datos
+    });
 
+    botonEnviarDatos.addEventListener('click', () => {
         const datosUsuario = {
             nombre: formularioRegistro.nombre.value,
             apellido: formularioRegistro.apellido.value,
@@ -161,13 +166,20 @@ document.addEventListener('DOMContentLoaded', () => {
             aceptarTerminos: formularioRegistro['aceptar-terminos'].checked
         };
 
+        const productosEnCarrito = JSON.parse(localStorage.getItem('productos-en-carrito'));
+
+        const datosCompletos = {
+            usuario: datosUsuario,
+            productos: productosEnCarrito
+        };
+
         // Enviar los datos del usuario y el carrito al servidor
-        fetch('./js/guardar_carrito.php', {
+        fetch('guardar_datos.php', {  // Cambia 'ruta/a/tu/archivo.php' por 'guardar_datos.php'
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(datosUsuario)
+            body: JSON.stringify(datosCompletos)
         })
         .then(response => response.json())
         .then(data => {
@@ -175,11 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Datos enviados exitosamente');
                 // Aquí puedes agregar más lógica para limpiar el formulario o redirigir al usuario
                 formularioRegistro.reset();
-                formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviar
+                localStorage.removeItem('productos-en-carrito'); // Limpiar el carrito
+                location.reload(); // Recargar la página
             } else {
                 console.error('Error:', data.message);
             }
         })
         .catch(error => console.error('Error:', error));
+        
     });
 });
