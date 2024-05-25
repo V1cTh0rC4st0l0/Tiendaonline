@@ -145,12 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     botonComprar.addEventListener('click', () => {
         formularioRegistro.style.display = 'block'; // Mostrar el formulario
-        botonEnviarDatos.style.display = 'none'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
+        botonEnviarDatos.style.display = 'block'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
     });
 
     document.getElementById('boton-enviar').addEventListener('click', () => {
         formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviarlo
-        botonEnviarDatos.style.display = 'block'; // Mostrar el botón para enviar los datos
+        botonEnviarDatos.style.display = 'none'; // Mostrar el botón para enviar los datos
     });
 
     botonEnviarDatos.addEventListener('click', () => {
