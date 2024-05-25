@@ -128,30 +128,58 @@ function actualizarTotal() {
     total.innerText = `$${totalCalculado}`;
 }
 
-botonComprar.addEventListener("click", comprarCarrito);
-function comprarCarrito() {
-    // Enviar los datos del carrito al servidor
-    fetch('./js/guardar_carrito.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(productosEnCarrito)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // Limpiar el carrito y actualizar la UI
-            productosEnCarrito.length = 0;
-            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-            
-            contenedorCarritoVacio.classList.add("disabled");
-            contenedorCarritoProductos.classList.add("disabled");
-            contenedorCarritoAcciones.classList.add("disabled");
-            contenedorCarritoComprado.classList.remove("disabled");
-        } else {
-            console.error('Error:', data.message);
-        }
-    })
-    .catch(error => console.error('Error:', error));
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const formularioRegistro = document.getElementById('formulario-registro');
+    const horaCompraInput = document.getElementById('hora-compra');
+    const diaCompraInput = document.getElementById('dia-compra');
+    const botonComprar = document.getElementById('carrito-acciones-comprar');
+
+    // Establecer la fecha y hora actuales para la compra
+    const ahora = new Date();
+    const horaActual = ahora.toTimeString().slice(0, 5);
+    const fechaActual = ahora.toISOString().slice(0, 10);
+
+    horaCompraInput.value = horaActual;
+    diaCompraInput.value = fechaActual;
+
+    botonComprar.addEventListener('click', () => {
+        formularioRegistro.style.display = 'block'; // Mostrar el formulario
+    });
+
+    formularioRegistro.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const datosUsuario = {
+            nombre: formularioRegistro.nombre.value,
+            apellido: formularioRegistro.apellido.value,
+            telefono: formularioRegistro.telefono.value,
+            correo: formularioRegistro.correo.value,
+            horaRecogida: formularioRegistro['hora-recogida'].value,
+            diaRecogida: formularioRegistro['dia-recogida'].value,
+            horaCompra: horaCompraInput.value,
+            diaCompra: diaCompraInput.value,
+            aceptarTerminos: formularioRegistro['aceptar-terminos'].checked
+        };
+
+        // Enviar los datos del usuario y el carrito al servidor
+        fetch('./js/guardar_carrito.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datosUsuario)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Datos enviados exitosamente');
+                // Aquí puedes agregar más lógica para limpiar el formulario o redirigir al usuario
+                formularioRegistro.reset();
+                formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviar
+            } else {
+                console.error('Error:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});

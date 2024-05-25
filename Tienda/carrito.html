@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <style>
+        #formulario-registro {
+            display: none; /* Ocultar el formulario inicialmente */
+        }
+    </style>
 </head>
 <body>
 
@@ -69,6 +74,42 @@
                 <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
 
             </div>
+            
+            <!-- Formulario de Registro -->
+            <div id="formulario-registro">
+                <h2>Información del Usuario</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="hora-recogida">Hora de Recogida:</label>
+                <input type="time" id="hora-recogida" name="hora-recogida" required>
+
+                <label for="dia-recogida">Día de Recogida:</label>
+                <input type="date" id="dia-recogida" name="dia-recogida" required>
+
+                <label for="hora-compra">Hora de Compra:</label>
+                <input type="time" id="hora-compra" name="hora-compra" value="" readonly>
+
+                <label for="dia-compra">Día de Compra:</label>
+                <input type="date" id="dia-compra" name="dia-compra" value="" readonly>
+
+                <label for="aceptar-terminos">
+                    <input type="checkbox" id="aceptar-terminos" name="aceptar-terminos" required>
+                    Acepto que mi información será cuidada.
+                </label>
+
+                <button type="submit" id="boton-enviar">Enviar</button>
+            </div>
+
         </main>
     </div>
     
