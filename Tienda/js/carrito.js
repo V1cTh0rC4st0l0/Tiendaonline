@@ -148,10 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
         botonEnviarDatos.style.display = 'block'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
     });
 
-    document.getElementById('boton-enviar').addEventListener('click', () => {
+    /*document.getElementById('boton-enviar').addEventListener('click', () => {
         formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviarlo
         botonEnviarDatos.style.display = 'none'; // Mostrar el botón para enviar los datos
-    });
+    });*/
 
     botonEnviarDatos.addEventListener('click', () => {
         const datosUsuario = {
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Enviar los datos del usuario y el carrito al servidor
-        fetch('guardar_datos.php', {  // Cambia 'ruta/a/tu/archivo.php' por 'guardar_datos.php'
+        fetch('./js/guardar_datos.php', {  // Cambia 'ruta/a/tu/archivo.php' por 'guardar_datos.php'
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Datos enviados exitosamente');
                 // Aquí puedes agregar más lógica para limpiar el formulario o redirigir al usuario
                 formularioRegistro.reset();
+                formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviarlo
                 localStorage.removeItem('productos-en-carrito'); // Limpiar el carrito
                 location.reload(); // Recargar la página
             } else {
