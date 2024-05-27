@@ -1,0 +1,1 @@
+Esa es una práctica elaborada en la materia de contrucción, administración y mantenimiento web con el fin de aprender como podemos mejorar una página, monitorizarla e incrustar aspectos de normatividad 
