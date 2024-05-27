@@ -136,6 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     horaCompraInput.value = new Date().toLocaleTimeString(); // Ejemplo de valor
     diaCompraInput.value = new Date().toLocaleDateString(); // Ejemplo de valor
+
+    botonComprar.addEventListener('click', () => {
+        formularioRegistro.style.display = 'block'; // Mostrar el formulario
+        //botonEnviarDatos.style.display = 'none'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
+    });
     
     botonEnviarDatos.addEventListener('click', () => {
         const datosUsuario = {
