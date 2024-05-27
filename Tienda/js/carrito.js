@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productos: productosEnCarrito
         };
 
-        fetch('./js/guardar_datos.php', {
+        fetch('./js/guardar_carrito.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
