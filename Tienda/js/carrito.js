@@ -131,12 +131,12 @@ function actualizarTotal() {
 document.addEventListener('DOMContentLoaded', () => {
     const formularioRegistro = document.getElementById('formulario');
     const botonEnviarDatos = document.getElementById('enviar-datos');
-    const botonComprar = document.getElementById('carrito-acciones-comprar'); // Asegúrate de que esto está definido
+    const botonComprar = document.getElementById('carrito-acciones-comprar'); 
     const horaCompraInput = document.createElement('input'); 
     const diaCompraInput = document.createElement('input');
 
-    horaCompraInput.value = new Date().toLocaleTimeString(); // Ejemplo de valor
-    diaCompraInput.value = new Date().toLocaleDateString(); // Ejemplo de valor
+    horaCompraInput.value = new Date().toLocaleTimeString(); 
+    diaCompraInput.value = new Date().toLocaleDateString(); 
 
     botonComprar.addEventListener('click', () => {
         document.getElementById('formulario-registro').style.display = 'block'; // Mostrar el formulario
