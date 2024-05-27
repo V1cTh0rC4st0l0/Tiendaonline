@@ -131,17 +131,17 @@ function actualizarTotal() {
 document.addEventListener('DOMContentLoaded', () => {
     const formularioRegistro = document.getElementById('formulario');
     const botonEnviarDatos = document.getElementById('enviar-datos');
-    const horaCompraInput = document.createElement('input'); // Temporal, asegúrate de que estas variables están definidas correctamente
-    const diaCompraInput = document.createElement('input');  // Temporal, asegúrate de que estas variables están definidas correctamente
-    
+    const botonComprar = document.getElementById('carrito-acciones-comprar'); // Asegúrate de que esto está definido
+    const horaCompraInput = document.createElement('input'); 
+    const diaCompraInput = document.createElement('input');
+
     horaCompraInput.value = new Date().toLocaleTimeString(); // Ejemplo de valor
     diaCompraInput.value = new Date().toLocaleDateString(); // Ejemplo de valor
 
     botonComprar.addEventListener('click', () => {
-        formularioRegistro.style.display = 'block'; // Mostrar el formulario
-        //botonEnviarDatos.style.display = 'none'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
+        document.getElementById('formulario-registro').style.display = 'block'; // Mostrar el formulario
     });
-    
+
     botonEnviarDatos.addEventListener('click', () => {
         const datosUsuario = {
             nombre: formularioRegistro.nombre.value,
@@ -154,14 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
             diaCompra: diaCompraInput.value,
             aceptarTerminos: formularioRegistro['aceptar-terminos'].checked
         };
-    
+
         const productosEnCarrito = JSON.parse(localStorage.getItem('productos-en-carrito'));
-    
+
         const datosCompletos = {
             usuario: datosUsuario,
             productos: productosEnCarrito
         };
-    
+
         fetch('./js/guardar_datos.php', {
             method: 'POST',
             headers: {
@@ -182,5 +182,4 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error:', error));
     });
-    
 });
