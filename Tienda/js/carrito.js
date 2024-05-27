@@ -129,30 +129,14 @@ function actualizarTotal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const formularioRegistro = document.getElementById('formulario-registro');
-    const botonEnviarDatos = document.getElementById('boton-enviar-datos');
-    const horaCompraInput = document.getElementById('hora-compra');
-    const diaCompraInput = document.getElementById('dia-compra');
-    const botonComprar = document.getElementById('carrito-acciones-comprar');
-
-    // Establecer la fecha y hora actuales para la compra
-    const ahora = new Date();
-    const horaActual = ahora.toTimeString().slice(0, 5);
-    const fechaActual = ahora.toISOString().slice(0, 10);
-
-    horaCompraInput.value = horaActual;
-    diaCompraInput.value = fechaActual;
-
-    botonComprar.addEventListener('click', () => {
-        formularioRegistro.style.display = 'block'; // Mostrar el formulario
-        botonEnviarDatos.style.display = 'block'; // Asegurarse de que el botón de enviar datos esté oculto inicialmente
-    });
-
-    /*document.getElementById('boton-enviar').addEventListener('click', () => {
-        formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviarlo
-        botonEnviarDatos.style.display = 'none'; // Mostrar el botón para enviar los datos
-    });*/
-
+    const formularioRegistro = document.getElementById('formulario');
+    const botonEnviarDatos = document.getElementById('enviar-datos');
+    const horaCompraInput = document.createElement('input'); // Temporal, asegúrate de que estas variables están definidas correctamente
+    const diaCompraInput = document.createElement('input');  // Temporal, asegúrate de que estas variables están definidas correctamente
+    
+    horaCompraInput.value = new Date().toLocaleTimeString(); // Ejemplo de valor
+    diaCompraInput.value = new Date().toLocaleDateString(); // Ejemplo de valor
+    
     botonEnviarDatos.addEventListener('click', () => {
         const datosUsuario = {
             nombre: formularioRegistro.nombre.value,
@@ -165,16 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
             diaCompra: diaCompraInput.value,
             aceptarTerminos: formularioRegistro['aceptar-terminos'].checked
         };
-
+    
         const productosEnCarrito = JSON.parse(localStorage.getItem('productos-en-carrito'));
-
+    
         const datosCompletos = {
             usuario: datosUsuario,
             productos: productosEnCarrito
         };
-
-        // Enviar los datos del usuario y el carrito al servidor
-        fetch('./js/guardar_datos.php', {  // Cambia 'ruta/a/tu/archivo.php' por 'guardar_datos.php'
+    
+        fetch('./js/guardar_datos.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -185,9 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             if (data.success) {
                 alert('Datos enviados exitosamente');
-                // Aquí puedes agregar más lógica para limpiar el formulario o redirigir al usuario
                 formularioRegistro.reset();
-                formularioRegistro.style.display = 'none'; // Ocultar el formulario después de enviarlo
                 localStorage.removeItem('productos-en-carrito'); // Limpiar el carrito
                 location.reload(); // Recargar la página
             } else {
@@ -195,6 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         .catch(error => console.error('Error:', error));
-        
     });
+    
 });
